@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<!-- Also read chapter 9 from slides - Regular Expressions -->
+
+<html>
+
+<head>
+	<title>Table CheckList</title>
+	<link rel="stylesheet" type="text/css" href="table.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+	<table id="myTable">
+		<tr>
+			<th></th>
+			<th>STUDENT</th>
+			<th>ADVISOR</th>
+			<th>AWARD<br />STATUS</th>
+			<th>SEMESTER</th>
+			<th>TYPE</th>
+			<th>BUDGET<br />#</th>
+			<th>PERCENTAGE</th>
+		</tr>
+		<tr>
+			<td><input type="checkbox" onclick="ontick(this)" /><br /><br /><img src="down.png" width="25px"
+					onclick="showRow(this)" /></td>
+			<td name="index">Student 1</td>
+			<td>Teacher 1</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>12345</td>
+			<td>100%</td>
+		</tr>
+		<tr class="dropDownTextArea">
+			<td colspan="8">
+				Advisor:<br /><br />
+				Award Details<br />
+				Summer 1-2014(TA)<br />
+				Budget Number: <br />
+				Tuition Number: <br />
+				Comments:<br /><br /><br />
+				Award Status:<br /><br /><br />
+			</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" onclick="ontick(this)" /><br /><br /><img src="down.png" width="25px"
+					onclick="showRow(this)" /></td>
+			<td name="index">Student 2</td>
+			<td>Teacher 2</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>23456</td>
+			<td>100%</td>
+		</tr>
+		<tr class="dropDownTextArea">
+			<td colspan="8">
+				Advisor:<br /><br />
+				Award Details<br />
+				Summer 1-2014(TA)<br />
+				Budget Number: <br />
+				Tuition Number: <br />
+				Comments:<br /><br /><br />
+				Award Status:<br /><br /><br />
+			</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" onclick="ontick(this)" /><br /><br /><img src="down.png" width="25px"
+					onclick="showRow(this)" /></td>
+			<td name="index">Student 3</td>
+			<td>Teacher 3</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>34567</td>
+			<td>100%</td>
+		</tr>
+		<tr class="dropDownTextArea">
+			<td colspan="8">
+				Advisor:<br /><br />
+				Award Details<br />
+				Summer 1-2014(TA)<br />
+				Budget Number: <br />
+				Tuition Number: <br />
+				Comments:<br /><br /><br />
+				Award Status:<br /><br /><br />
+			</td>
+		</tr>
+	</table>
+
+
+
+	<br /><br />
+	<center>
+		<button id="button">SUBMIT SELECTED AWARDS</button>
+		<button id="add" onclick="addStudent()">Add New Student</button>
+	</center>
+	<br>
+
+	<table class="editData" name="editData" id="editData">
+		<tr>
+			<td id="Heading"></td>
+			<td><button id="close" type="button" onclick="hidePopup(this)">X</button></td>
+		</tr>
+
+		<form>
+			<tr>
+				<td><label>Student : </label><input type="text" id="Student" required disabled /></td>
+			</tr>
+			<tr>
+				<td><label>Teacher : </label><input type="text" id="Teacher" required /></td>
+			</tr>
+			<tr>
+				<td><label>Award Status : </label><input type="text" id="awardStatus" required /></td>
+			</tr>
+			<tr>
+				<td><label>Semester : </label><input type="text" id="Semester" required /></td>
+			</tr>
+			<tr>
+				<td><label>Type : </label><input type="text" id="Type" required /></td>
+			</tr>
+			<tr>
+				<td><label>Budget # : </label><input type="text" id="Budget" required /></td>
+			</tr>
+			<tr>
+				<td><label>Percentage : </label><input type="text" id="Percentage" required /></td>
+			</tr>
+
+			<tr>
+				<td>
+					<button id="cancel" type="button" onclick="hidePopup(this)">Cancel</button>
+
+				<button id="save" type="button" onclick="saveData(this)">Update</button> </td>
+			</tr>
+
+		</form>
+
+
+	</table>
+
+	<p align="center" id="message"></p>
+	<nav class="socialmediaicons"></nav>
+	<script src="script.js"></script>
+
+</body>
+
+</html>
